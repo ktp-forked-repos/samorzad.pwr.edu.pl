@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald&subset=latin,latin-ext);
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: #37b;
+    text-decoration: dotted;
+}
+
+a img {
+  border: none;
+}
+
+.background-fix {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  background: #fafafa url(school.png);
+  box-shadow: rgba(0,0,0,.5) -40px 0 40px -48px inset;
+  z-index: -1;
+}
+
+.topleft {
+  float: left;
+  width: 20%;
+  background-position: 0 -30px;
+  text-align: center;
+  z-index: 1;
+}
+
+.topleft a,
+.sidebar a {
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #567;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.topbar {
+  position: absolute;
+    top: 0;
+    left: 20%;
+  width: 80%;
+  padding: 10px;
+  z-index: 1;
+}
+
+.topbar aside {
+  float: right;
+}
+
+.topbar a {
+  opacity: .6;
+  padding: 5px;
+  transition: opacity ease .5s;
+}
+
+.topbar a:hover {
+  opacity: 1;
+}
+
+.sidebar {
+  clear: left;
+  float: left;
+  width: 20%;
+  text-align: center;
+  z-index: 1;
+}
+
+.sidebar ul {
+  margin: 0 0 20px; padding: 0;
+  list-style: none;
+}
+
+.sidebar ul a:hover,
+.topleft .listed:hover {
+  box-shadow: #fff -40px 0 40px 0 inset;
+}
+
+/* main sections */
+
+body > section,
+body > aside {
+  margin-left: 20%;
+}
+
+.article {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.article.hero {
+  padding: 60px 10px 10px;
+  height: 70vh;
+}
+
+.read-more {
+  background-color: #60a0cc;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-size: 48px;
+  line-height: 36px;
+  height: 48px;
+  text-align: center;
+  width: 48px;
+  box-shadow: #000 0 0 5px;
+}
+
+.article .read-more {
+  position: absolute;
+  bottom: 11vh;
+  right: 10px;
+}
+
+.article.text .read-more {
+  position: absolute;
+  top: auto;
+  bottom: 16px;
+  right: 12px;
+}
+
+.article.hero .read-more {
+  bottom: 32px;
+  right: 40px;
+}
+
+.article h3 {
+  font-family: Oswald, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1em;
+  margin: 0 0 12px;
+}
+.article.hero h3 {
+  font-size: 40px;
+  margin-bottom: 0 0 16px;
+}
+.article.text .contents h3 {
+  color: #111;
+}
+
+.article p {
+  margin: 12px 0 0;
+}
+.article.hero p {
+  font-weight: 600;
+}
+
+.article.dark {
+  color: #fff;
+  text-shadow: #000 0 0 5px;
+}
+
+.article .contents {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255,255,255,.5);
+  width: 100%;
+}
+.article.dark .contents {
+  background: rgba(0,0,0,.3)
+}
+.article.text .contents {
+  box-shadow: rgba(0,0,0,.5) 0 -40px 40px -48px inset;
+}
+
+.article.hero .contents {
+  padding: 30px;
+}
+
+.article.text .contents {
+  background: transparent;
+  color: #456;
+  font-weight:
+}
+
+.article.of-three .contents {
+  padding: 10px;
+}
+
+.article.text .contents {
+  top: 0;
+}
+
+.article.of-three {
+  width: 33.3333333%;
+  height: 50vh;
+  float: left;
+}
+
+.article.text hr {
+  width: 20%;
+  margin: 20px 0 8px;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
+/* organizacje */
+
+.organizacje {
+  position: relative;
+  font-size: 14px;
+  color: #333;
+  padding: 0 15px 1px;
+}
+
+.organizacje .item {
+  width: 25%;
+  float: left;
+  padding: 10px 15px;
+  opacity: .5;
+  transition: opacity ease .5s;
+}
+
+.organizacje .item:hover {
+  opacity: 1;
+}
+
+.organizacje h3 {
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+}
+
+.organizacje img {
+  max-height: 70px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* pagination */
+
+.pagination {
+  float: left;
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+}
+
+.pagination a {
+  margin: -20px 0;
+  padding: 20px;
+}
+
+.pagination .active {
+  background-color: #60a0cc;
+  color: #fff;
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  background: #101616;
+  color: #bcc;
+  z-index: 1;
+  padding: 10px 40px;
+  font-size: 14px;
+}
+
+footer strong {
+  font-weight: 700;
+}
+
+footer p {
+  margin-left: 20%;
+}
+
+footer .separator {
+  margin: 20px auto;
+  display: block;
+  opacity: .5;
+}
+
+footer .notice {
+  margin: 0;
+  color: #455;
+  text-align: center;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
